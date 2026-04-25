@@ -4,16 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista Drag and Drop</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
+    <main class="app-shell">
+        <header class="app-header">
+            <h1>Gerenciador de tarefas</h1>
+            <p>Arraste para reorganizar, clique duas vezes para renomear.</p>
+        </header>
 
-    <div class="lista">
-        <div class="item-arrastavel" draggable="true">Tarefa 1</div>
-        <div class="item-arrastavel" draggable="true">Tarefa 2</div>
-        <div class="item-arrastavel" draggable="true">Tarefa 3</div>
-    </div>
+        <section class="app-controls">
+            <form class="add-item-form">
+                <input type="text" class="item-input" placeholder="Nova tarefa" aria-label="Nova tarefa" />
+                <button type="submit">Adicionar item</button>
+            </form>
+        </section>
+
+        <div class="lista">
+            <div class="item-arrastavel" draggable="true">
+                <span class="item-text">Tarefa 1</span>
+                <button type="button" class="remove-button" aria-label="Remover tarefa">×</button>
+            </div>
+            <div class="item-arrastavel" draggable="true">
+                <span class="item-text">Tarefa 2</span>
+                <button type="button" class="remove-button" aria-label="Remover tarefa">×</button>
+            </div>
+            <div class="item-arrastavel" draggable="true">
+                <span class="item-text">Tarefa 3</span>
+                <button type="button" class="remove-button" aria-label="Remover tarefa">×</button>
+            </div>
+        </div>
+    </main>
 
     <script src="script.js"></script>
 </body>
 </html>
+
